@@ -8,8 +8,11 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-kumbh-sans);
+}
+
+@theme {
+  --color-invest: #f73760;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -23,4 +26,8 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.bg-top-t {
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, hsla(233, 28%, calc(19% - 5%), calc(100% - 20%)) 100%), url('/image/hero-image-3.jpg');
 }
