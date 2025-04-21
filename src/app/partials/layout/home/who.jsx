@@ -41,7 +41,7 @@ export function Who() {
     return (
         <div className="relative min-h-96 mt-10 lg:mt-32 py-28 lg:py-32">
             <div className="container mx-auto p-5 lg:p-0">
-                <div className="text-center font-bold text-3xl xl:text-4xl font-[family-name:var(--font-kumbh-sans)] text-slate-700">What We Offer</div>
+                <div className="text-center font-bold text-3xl xl:text-4xl font-[family-name:var(--font-kumbh-sans)] text-slate-700 bg-white lg:bg-transparent">What We Offer</div>
                 <div className="text-center font-bold text-md xl:text-lg font-[family-name:var(--font-kumbh-sans)] text-slate-500 mt-5">More Than Just Capital</div>
                 <div className="text-center text-md xl:text-md font-[family-name:var(--font-kumbh-sans)] text-slate-500 mt-2">
                     We provide a full ecosystem to accelerate your growth
@@ -51,7 +51,7 @@ export function Who() {
                     {
                         Details.map((item, index) => {
                             return (
-                                <div className="text-center gap-4 p-2 flex-col lg:p-5 flex items-center justify-center rounded-lg text-lg border border-sky-100 shadow-xs shadow-sky-100" key={index}>
+                                <div className="text-center gap-1 p-5 bg-white flex-col lg:p-5 flex items-center justify-center rounded-lg text-lg border border-sky-100 shadow-xs shadow-sky-100" key={index}>
 
                                     <div className="capitalize text-slate-500 font-semibold">
                                         {item.title}
