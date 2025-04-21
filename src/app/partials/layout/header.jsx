@@ -2,6 +2,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { Menu } from "@/app/components/menu";
+import LetsTalkButton from "@/app/components/letsTalkButton";
 
 export function Header() {
 
@@ -36,7 +37,7 @@ export function Header() {
                 <Menu navBg={navBg} />
             </div>
             <div className={`flex-1/5 hidden xl:block ${navBg ? 'text-slate-800' : ''}`}>
-                +1 800 555 5555
+                <LetsTalkButton />
             </div>
         </header>
     )
