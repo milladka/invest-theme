@@ -1,9 +1,9 @@
 'use client'
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Autoplay } from 'swiper/modules';
+import { Navigation, Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
-
+import 'swiper/css/pagination';
 const portfolioItems = [
     {
         title: 'AI-Powered SaaS Platform',
@@ -41,7 +41,7 @@ export default function Portfolio() {
                     Portfolio & Success Stories
                 </h2>
                 <Swiper
-                    modules={[Navigation, Autoplay]}
+                    modules={[Navigation, Autoplay, Pagination]}
                     spaceBetween={30}
                     slidesPerView={1}
                     breakpoints={{
@@ -53,8 +53,10 @@ export default function Portfolio() {
                         },
                     }}
                     navigation
+                    pagination={{ clickable: true }}
                     loop
                     autoplay={{ delay: 5000 }}
+                    className='h-[26rem]'
                 >
                     {portfolioItems.map((item, index) => (
                         <SwiperSlide key={index}>
