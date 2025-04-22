@@ -3,13 +3,11 @@ import React, { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { Menu } from "@/app/components/menu";
 import LetsTalkButton from "@/app/components/letsTalkButton";
-import { MenuIcon } from "lucide-react";
 import MobileSidebar from "./mobileSidebar";
 
 export function Header() {
 
     const [navBg, setNavBg] = useState(false);
-
     const changeNavBg = e => {
         window.scrollY >= 100 ? setNavBg(true) : setNavBg(false);
     };
@@ -42,7 +40,6 @@ export function Header() {
                 <LetsTalkButton />
             </div>
             <div className={`flex-1/2 xl:hidden flex items-center justify-end  ${navBg ? 'text-slate-800' : ''}`}>
-                {/* <button><MenuIcon size={25} /></button> */}
                 <MobileSidebar navBg={navBg} />
             </div>
         </header>
